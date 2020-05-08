@@ -29,10 +29,10 @@
         <div class="book">
             {{#post}}
 
-            <!- Directory- >
+            <!-- Directory -->
             <div class="book-summary">
 
-                <!- Search box- >
+                <!-- Search box -->
                 <div id="book-search-input" role="search">
                   <form>
                     <input type="text" placeholder="搜索" id="search-field">
@@ -52,7 +52,7 @@
                   </ul>
                 </nav>
 
-                {{!-Get the first Tag in the current article-}}
+                {{!--Get the first Tag in the current article--}}
                 {{#foreach tags}}{{#if @first}}
                         
                     {{!-Get all articles under Tag-}}
@@ -65,15 +65,15 @@
                     {{/foreach}}
                     {{/get}}
                     </div>
-                    {{!-End Get all articles under Tag--}}
+                    {{!--End Get all articles under Tag--}}
 
                 {{/if}}{{/foreach}}
             </div>
 
-            <!- Article content area- >
+            <!-- Article content area -->
             <div class="book-body">
                 <div class="body-inner">
-                    <!- Head area- >
+                    <!-- Head area -->
                     <div class="book-header" role="navigation">
                         <h1 style="opacity: 1;">
                             <i class="fa fa-circle-o-notch fa-spin"></i>
@@ -83,7 +83,7 @@
 
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
-                            <!- class = open display query results, otherwise display article content- >
+                            <!-- class=open display query results, otherwise display article content -->
                             <div id="book-search-results">
                                 <div class="search-noresults">                                    
                                     <section class="normal markdown-section">
