@@ -49,34 +49,34 @@
 
         </div>
         <div class="footer">
-            <a class="copyright" target="blank" href="https://github.com/whaios/wwiki">本书使用 wwiki 发布</a>
+            < A  class = " Copyright "  target = " blank "  the href = " Casagbic.com " > Casagbic </ A >
         </div>
         <script type="text/javascript" src="{{asset "js/jquery-3.2.1.min.js"}}"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                var delay =1;
+                var delay = 1 ;
                 var DELAY_STEP =200;
-                var animationOptions ={opacity:1,top:0};
+                var animationOptions = {opacity : 1 , top : 0 };
                 $('h1').animate(animationOptions).promise()
                     .pipe(animationBio)
                     .pipe(animateMain)
                     .pipe(animateLocationIcon);
-                function animationBio() {
-                    $('h2').animate(animationOptions);
+                function  animationBio () {
+                    $ ( ' h2 ' ). animate (animationOptions);
                 }
                 function animateMain() {
                     var dfd =$.Deferred();
-                    var els =$('.animate-init');
-                    var len =els.length;
+                    var els = $ ( ' .animate-init ' );
+                    var len = els . length ;
                     els.each(function (index,el) {
-                        delay++;$(el)
+                        delay ++ ; $ (the)
                         .delay(index *DELAY_STEP)
-                        .animate(animationOptions);
+                        . animate (animationOptions);
                         (len - 1 ===index) &&dfd.resolve();
                     });
                     return dfd.promise();
                 }
-                function animateLocationIcon() {
+                function  animateLocationIcon () {
                     $('.location-icon').delay(delay *DELAY_STEP)
                     .animate({opacity:1,top:0})
                     .promise().done();
