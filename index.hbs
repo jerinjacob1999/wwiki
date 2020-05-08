@@ -49,7 +49,7 @@
 
         </div>
         <div class="footer">
-            < A  class = " Copyright "  target = " blank "  the href = " Casagbic.com " > Casagbic </ A >
+            <a class = "Copyright" target = "blank"href = "https://casagbic.com "> Casagbic </a>
         </div>
         <script type="text/javascript" src="{{asset "js/jquery-3.2.1.min.js"}}"></script>
         <script type="text/javascript">
@@ -66,12 +66,12 @@
                 }
                 function animateMain() {
                     var dfd =$.Deferred();
-                    var els = $ ( ' .animate-init ' );
-                    var len = els . length ;
+                    var els = $ ('.animate-init');
+                    var len = els.length ;
                     els.each(function (index,el) {
-                        delay ++ ; $ (the)
+                        delay ++;$(el)
                         .delay(index *DELAY_STEP)
-                        . animate (animationOptions);
+                        .animate(animationOptions);
                         (len - 1 ===index) &&dfd.resolve();
                     });
                     return dfd.promise();
