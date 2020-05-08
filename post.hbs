@@ -29,10 +29,10 @@
         <div class="book">
             {{#post}}
 
-            <!-- 目录 -->
+            <!- Directory- >
             <div class="book-summary">
 
-                <!-- 搜索框 -->
+                <!- Search box- >
                 <div id="book-search-input" role="search">
                   <form>
                     <input type="text" placeholder="搜索" id="search-field">
@@ -46,16 +46,16 @@
                     <li class="divider"></li>
                     <li>
                       <a class="gitbook-link" target="blank" href="https://github.com/whaios/wwiki">
-                        本书使用 wwiki 发布
+                        This book is published using wwiki
                         </a>
                     </li>
                   </ul>
                 </nav>
 
-                {{!-- 获取当前文章中第一个Tag --}}
+                {{!-Get the first Tag in the current article-}}
                 {{#foreach tags}}{{#if @first}}
                         
-                    {{!-- 获取Tag下所有的文章 --}}
+                    {{!-Get all articles under Tag-}}
                     <div id="J-posts-hidden" class="hidden" data-slug="{{slug}}">
                     {{#get "posts" filter="tags:[{{slug}}]" order="slug asc" }}
                     {{#foreach posts}}
@@ -65,15 +65,15 @@
                     {{/foreach}}
                     {{/get}}
                     </div>
-                    {{!-- End 获取Tag下所有的文章 --}}
+                    {{!-End Get all articles under Tag--}}
 
                 {{/if}}{{/foreach}}
             </div>
 
-            <!-- 文章内容区域 -->
+            <!- Article content area- >
             <div class="book-body">
                 <div class="body-inner">
-                    <!-- 头部区域 -->
+                    <!- Head area- >
                     <div class="book-header" role="navigation">
                         <h1 style="opacity: 1;">
                             <i class="fa fa-circle-o-notch fa-spin"></i>
@@ -83,7 +83,7 @@
 
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
-                            <!-- class=open 显示查询结果，否则显示文章内容 -->
+                            <!- class = open display query results, otherwise display article content- >
                             <div id="book-search-results">
                                 <div class="search-noresults">                                    
                                     <section class="normal markdown-section">
@@ -149,4 +149,3 @@
         {{ghost_foot}}
     </body>
 </html>
-
